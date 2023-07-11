@@ -34,7 +34,7 @@ function CheckoutForm() {
         body: JSON.stringify({
           paymentMethod: paymentMethod?.paymentMethod?.id,
           "app_store_id": "t5dcpa",
-          "plan_id": 1
+          "plan_id": 2
         }),
       }).then((res) => res.json());
       console.log(response.clientSecret)
@@ -59,8 +59,8 @@ function CheckoutForm() {
           payment_intent: confirmPayment?.paymentIntent?.id,
           payment_method: 'pm_card_visa',
           receipt_email: email,
-          id: response.store_subscription.external_id,
-          client_id: response.store_subscription.client_id
+          id: response.subscriptionId,
+          client_id: response.clientId
        
         }),
       }).then((res) => res.json());
