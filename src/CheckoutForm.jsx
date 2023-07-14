@@ -56,7 +56,7 @@ function CheckoutForm() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          payment_intent: confirmPayment?.paymentIntent?.id,
+          payment_intent: confirmPayment.paymentIntent.id,
           payment_method: 'pm_card_visa',
           receipt_email: email,
           id: response.subscriptionId,
